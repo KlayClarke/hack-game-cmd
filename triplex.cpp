@@ -35,6 +35,10 @@ int main()
   {
     std::cout << "You win!! Congratulations!";
   }
+  else
+  {
+    std::cout << "You lose! I'm sorry!";
+  }
 
   return 0;
 }
