@@ -10,8 +10,10 @@ int main()
   int b = 8;
   int c = 12;
 
+  int sum = a + b + c;
+
   std::cout << std::endl;
-  std::cout << a + b + c;
+  std::cout << sum;
 
   return 0;
 }
