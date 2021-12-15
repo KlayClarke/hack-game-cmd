@@ -6,7 +6,7 @@ void PrintIntroduction()
     std::cout << "You need to enter the correct codes to continue...\n\n";
 }
 
-void PlayGame()
+bool PlayGame()
 {
     
     PrintIntroduction();
@@ -38,11 +38,13 @@ void PlayGame()
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
         std::cout << "\nYou win!! Congratulations!";
+        return true;
     }
 
     else
     {
         std::cout << "\nYou lose! I'm sorry!\n";
+        return false;
     }
 }
 
@@ -50,7 +52,7 @@ int main()
 {
     while (true)
     {
-        PlayGame();
+        bool bLevelComplete = PlayGame();
         std::cin.clear();
         std::cin.ignore();
     }
