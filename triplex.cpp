@@ -3,7 +3,7 @@
 void PrintIntroduction(int Difficulty)
 {
     std::cout << "\n\nYou are attempting to break out of a level " << Difficulty;
-    std::cout << " political prison and expose secrets. You need to enter the correct codes to continue...\n\n";
+    std::cout << " political prison and expose secrets. You need to enter the correct code to continue...\n\n";
 }
 
 bool PlayGame(int Difficulty)
@@ -11,9 +11,9 @@ bool PlayGame(int Difficulty)
     
     PrintIntroduction(Difficulty);
 
-    const int CodeA = rand() % 5 + 1;
-    const int CodeB = rand() % 5 + 1;
-    const int CodeC = rand() % 5 + 1;
+    const int CodeA = rand() % Difficulty + 1;
+    const int CodeB = rand() % Difficulty + 1;
+    const int CodeC = rand() % Difficulty + 1;
 
     const int CodeSum = CodeA + CodeB + CodeC;
     const int CodeProduct = CodeA * CodeB * CodeC;
