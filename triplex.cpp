@@ -71,13 +71,8 @@ int main()
         }
         else
         {
-            // Only decrease level of difficulty when Difficulty is already greater than 1 - if not, would raise errors
-            if (LevelDifficulty > 1)
-            {
-                // Decrease level of difficulty
-                --LevelDifficulty;                
-            }
-
+            // Reset level of difficulty
+            LevelDifficulty = 1;
         }
     }
 
