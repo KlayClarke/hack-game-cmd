@@ -1,15 +1,15 @@
 #include <iostream>
 
-void PrintIntroduction()
+void PrintIntroduction(int Difficulty)
 {
-    std::cout << "\n\nYou are attempting to break out of political prison and expose secrets.\n";
-    std::cout << "You need to enter the correct codes to continue...\n\n";
+    std::cout << "\n\nYou are attempting to break out of a level " << Difficulty;
+    std::cout << " political prison and expose secrets. You need to enter the correct codes to continue...\n\n";
 }
 
-bool PlayGame()
+bool PlayGame(int Difficulty)
 {
     
-    PrintIntroduction();
+    PrintIntroduction(Difficulty);
 
     const int CodeA = 2;
     const int CodeB = 4;
@@ -50,11 +50,18 @@ bool PlayGame()
 
 int main()
 {
+    int LevelDifficulty = 1;
     while (true)
     {
-        bool bLevelComplete = PlayGame();
+        bool bLevelComplete = PlayGame(LevelDifficulty);
         std::cin.clear();
         std::cin.ignore();
+
+        if (bLevelComplete)
+        {
+            // Increase level of difficulty
+            ++LevelDifficulty;
+        }
     }
 
     return 0;
