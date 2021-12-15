@@ -1,9 +1,15 @@
 #include <iostream>
 
+void PrintIntroduction()
+{
+    std::cout << "\n\nYou are attempting to break out of political prison and expose secrets.\n";
+    std::cout << "You need to enter the correct codes to continue...\n\n";
+}
+
 void PlayGame()
 {
-    std::cout << "You are attempting to break out of political prison and expose secrets.\n";
-    std::cout << "You need to enter the correct codes to continue...\n\n";
+    
+    PrintIntroduction();
 
     const int CodeA = 2;
     const int CodeB = 4;
@@ -29,7 +35,7 @@ void PlayGame()
     std::cout << "\nYour guesses multiply to give: " << GuessProduct;
 
     // Check if player guess is correct 
-    if (GuessSum == CodeSum && GuessProduct == CodeProduct) 
+    if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
         std::cout << "\nYou win!! Congratulations!";
     }
@@ -42,5 +48,12 @@ void PlayGame()
 
 int main()
 {
+    while (true)
+    {
+        PlayGame();
+        std::cin.clear();
+        std::cin.ignore();
+    }
+
     return 0;
 }
