@@ -2,14 +2,12 @@
 #include <iostream>
 using namespace std; // Use entire std namespace
 
-void PrintIntroduction(int Difficulty)
-{
+void PrintIntroduction(int Difficulty) {
     cout << "\n\nYou are attempting to break out of a level " << Difficulty;
     cout << " political prison and expose secrets. You need to enter the correct code to continue...\n\n";
 }
 
-bool PlayGame(int Difficulty)
-{
+bool PlayGame(int Difficulty) {
     PrintIntroduction(Difficulty);
     const int CodeB = rand() % Difficulty + Difficulty;
     const int CodeC = rand() % Difficulty + Difficulty;
@@ -29,35 +27,30 @@ bool PlayGame(int Difficulty)
     cout << "\nYour guesses add up to: " << GuessSum;
     cout << "\nYour guesses multiply to give: " << GuessProduct;
     // Check if player guess is correct 
-    if (GuessSum == CodeSum && GuessProduct == CodeProduct)
-    {
+    if (GuessSum == CodeSum && GuessProduct == CodeProduct) {
         cout << "\n**You\'ve cracked the code!";
         return true;
     }
-    else
-    {
+    else {
         cout << "\n**You failed miserably. Try again!\n";
         return false;
     }
 }
 
-int main()
-{
+int main() {
     srand(time(NULL)); //Create random sequence based on time of day
     int LevelDifficulty = 1;
     int const MaxLevel = 5;
-    while (LevelDifficulty <= MaxLevel) // Loop game until all levels are completed - difficulty increases after each level
-    {
+    // Loop game until all levels are completed - difficulty increases after each level 
+    while (LevelDifficulty <= MaxLevel) {
         bool bLevelComplete = PlayGame(LevelDifficulty);
         cin.clear(); // Clears errors
         cin.ignore(); // Ignores buffer
-        if (bLevelComplete)
-        {
+        if (bLevelComplete) {
             // Increase level of difficulty
             ++LevelDifficulty;
         }   
-        else
-        {
+        else {
             // Reset level of difficulty
             LevelDifficulty = 1;
         }
