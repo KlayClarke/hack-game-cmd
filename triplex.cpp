@@ -37,13 +37,13 @@ bool PlayGame(int Difficulty)
     // Check if player guess is correct 
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
-        std::cout << "\nYou win!! Congratulations!";
+        std::cout << "\nYou\'ve cracked the code!";
         return true;
     }
 
     else
     {
-        std::cout << "\nYou lose! I'm sorry!\n";
+        std::cout << "\nYou failed miserably. Try again!\n";
         return false;
     }
 }
@@ -66,6 +66,8 @@ int main()
             ++LevelDifficulty;
         }
     }
+
+    std::cout << "\nCongratulations, you\'ve escaped the prison.";
 
     return 0;
 }
