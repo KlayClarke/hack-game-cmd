@@ -69,6 +69,7 @@ int main()
             // Increase level of difficulty
             ++LevelDifficulty;
         }
+        
         else
         {
             // Reset level of difficulty
