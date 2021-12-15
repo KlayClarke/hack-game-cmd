@@ -1,10 +1,12 @@
 #include <ctime>
 #include <iostream>
 
+using namespace std; // Use entire std namespace
+
 void PrintIntroduction(int Difficulty)
 {
-    std::cout << "\n\nYou are attempting to break out of a level " << Difficulty;
-    std::cout << " political prison and expose secrets. You need to enter the correct code to continue...\n\n";
+    cout << "\n\nYou are attempting to break out of a level " << Difficulty;
+    cout << " political prison and expose secrets. You need to enter the correct code to continue...\n\n";
 }
 
 bool PlayGame(int Difficulty)
@@ -20,31 +22,31 @@ bool PlayGame(int Difficulty)
     const int CodeProduct = CodeA * CodeB * CodeC;
 
     // Print CodeSum and CodeProduct to terminal
-    std::cout << "* There are three numbers in the code";
-    std::cout << "\n* The codes add up to: " << CodeSum;
-    std::cout << "\n* The codes multiply to give: " << CodeProduct << std::endl;
+    cout << "* There are three numbers in the code";
+    cout << "\n* The codes add up to: " << CodeSum;
+    cout << "\n* The codes multiply to give: " << CodeProduct << std::endl;
 
     // Store player guess
     int GuessA, GuessB, GuessC;
-    std::cin >> GuessA >> GuessB >> GuessC;
+    cin >> GuessA >> GuessB >> GuessC;
 
     const int GuessSum = GuessA + GuessB + GuessC;
     const int GuessProduct = GuessA * GuessB * GuessC;
 
-    std::cout << "\nYou entered: " << GuessA << GuessB << GuessC;
-    std::cout << "\nYour guesses add up to: " << GuessSum;
-    std::cout << "\nYour guesses multiply to give: " << GuessProduct;
+    cout << "\nYou entered: " << GuessA << GuessB << GuessC;
+    cout << "\nYour guesses add up to: " << GuessSum;
+    cout << "\nYour guesses multiply to give: " << GuessProduct;
 
     // Check if player guess is correct 
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
-        std::cout << "\n**You\'ve cracked the code!";
+        cout << "\n**You\'ve cracked the code!";
         return true;
     }
 
     else
     {
-        std::cout << "\n**You failed miserably. Try again!\n";
+        cout << "\n**You failed miserably. Try again!\n";
         return false;
     }
 }
@@ -59,8 +61,8 @@ int main()
     while (LevelDifficulty <= MaxLevel) // Loop game until all levels are completed - difficulty increases after each level
     {
         bool bLevelComplete = PlayGame(LevelDifficulty);
-        std::cin.clear(); // Clears errors
-        std::cin.ignore(); // Ignores buffer
+        cin.clear(); // Clears errors
+        cin.ignore(); // Ignores buffer
 
         if (bLevelComplete)
         {
@@ -69,7 +71,7 @@ int main()
         }
     }
 
-    std::cout << "\n****Congratulations, you\'ve escaped the prison.";
+    cout << "\n****Congratulations, you\'ve escaped the prison.";
 
     return 0;
 }
