@@ -31,5 +31,10 @@ int main()
   std::cout << "Your guesses add up to: " << GuessSum << std::endl;
   std::cout << "Your guesses multiply to give: " << GuessProduct << std::endl;
 
+  if (GuessSum == CodeSum && GuessProduct == CodeProduct) 
+  {
+    std::cout << "You win!! Congratulations!";
+  }
+
   return 0;
 }
