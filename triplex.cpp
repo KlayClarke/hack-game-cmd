@@ -18,10 +18,12 @@ int main()
   std::cout << "* The codes add up to: " << CodeSum << std::endl;
   std::cout << "* The codes multiply to give: " << CodeProduct << std::endl;
 
-  int PlayerGuess;
+  int GuessA, GuessB, GuessC;
 
-  std::cin >> PlayerGuess;
-  std::cout << "You entered: " << PlayerGuess;
+  std::cin >> GuessA;
+  std::cin >> GuessB;
+  std::cin >> GuessC;
+  std::cout << "You entered: " << GuessA << GuessB << GuessC;
 
   return 0;
 }
