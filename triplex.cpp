@@ -7,6 +7,7 @@ void PrintIntroduction(int Difficulty)
     cout << "\n\nYou are attempting to break out of a level " << Difficulty;
     cout << " political prison and expose secrets. You need to enter the correct code to continue...\n\n";
 }
+
 bool PlayGame(int Difficulty)
 {
     PrintIntroduction(Difficulty);
