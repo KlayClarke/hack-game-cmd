@@ -4,20 +4,19 @@ int main()
 {
   std::cout << "You are attempting to break out of political prison and expose secrets.";
   std::cout << std::endl;
-  std::cout << "You need to enter the correct codes to continue...";
+  std::cout << "You need to enter the correct codes to continue..." << std::endl;
 
-  int a = 4;
-  int b = 8;
-  int c = 12;
+  const int CodeA = 2;
+  const int CodeB = 4;
+  const int CodeC = 5;
 
-  a = 7;
-
-  int sum = a + b + c;
-  int product = a * b * c;
+  const int CodeSum = CodeA + CodeB + CodeC;
+  const int CodeProduct = CodeA * CodeB * CodeC;
 
   std::cout << std::endl;
-  std::cout << sum << std::endl;
-  std::cout << product;
+  std::cout << "|| There are three numbers in the code" << std::endl;
+  std::cout << "|| The codes add up to: " << sum << std::endl;
+  std::cout << "|| The codes multiply to give: " << product << std::endl;
 
   return 0;
 }
