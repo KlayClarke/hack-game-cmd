@@ -23,7 +23,13 @@ int main()
   std::cin >> GuessA;
   std::cin >> GuessB;
   std::cin >> GuessC;
-  std::cout << "You entered: " << GuessA << GuessB << GuessC;
+
+  const int GuessSum = GuessA + GuessB + GuessC;
+  const int GuessProduct = GuessA * GuessB * GuessC;
+
+  std::cout << "You entered: " << GuessA << GuessB << GuessC << std::endl;
+  std::cout << "Your guesses add up to: " << GuessSum << std::endl;
+  std::cout << "Your guesses multiply to give: " << GuessProduct << std::endl;
 
   return 0;
 }
