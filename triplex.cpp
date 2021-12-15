@@ -14,9 +14,14 @@ int main()
   const int CodeProduct = CodeA * CodeB * CodeC;
 
   std::cout << std::endl;
-  std::cout << "|| There are three numbers in the code" << std::endl;
-  std::cout << "|| The codes add up to: " << CodeSum << std::endl;
-  std::cout << "|| The codes multiply to give: " << CodeProduct << std::endl;
+  std::cout << "* There are three numbers in the code" << std::endl;
+  std::cout << "* The codes add up to: " << CodeSum << std::endl;
+  std::cout << "* The codes multiply to give: " << CodeProduct << std::endl;
+
+  int PlayerGuess;
+
+  std::cin >> PlayerGuess;
+  std::cout << "You entered: " << PlayerGuess;
 
   return 0;
 }
