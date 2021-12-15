@@ -1,3 +1,4 @@
+#include <ctime>
 #include <iostream>
 
 void PrintIntroduction(int Difficulty)
@@ -50,15 +51,16 @@ bool PlayGame(int Difficulty)
 
 int main()
 {
+    srand(time(NULL)); //Create random sequence based on time of day
+
     int LevelDifficulty = 1;
     int const MaxLevel = 5;
 
-    // Loop game until all levels are completed - difficulty increases after each level
-    while (LevelDifficulty <= MaxLevel) 
+    while (LevelDifficulty <= MaxLevel) // Loop game until all levels are completed - difficulty increases after each level
     {
         bool bLevelComplete = PlayGame(LevelDifficulty);
-        std::cin.clear();
-        std::cin.ignore();
+        std::cin.clear(); // Clears errors
+        std::cin.ignore(); // Ignores buffer
 
         if (bLevelComplete)
         {
