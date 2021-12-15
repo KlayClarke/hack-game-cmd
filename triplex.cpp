@@ -10,6 +10,8 @@ int main()
   int b = 8;
   int c = 12;
 
+  a = 7;
+
   int sum = a + b + c;
   int product = a * b * c;
 
