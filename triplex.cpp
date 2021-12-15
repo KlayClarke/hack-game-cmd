@@ -11,9 +11,9 @@ bool PlayGame(int Difficulty)
     
     PrintIntroduction(Difficulty);
 
-    const int CodeA = 2;
-    const int CodeB = 4;
-    const int CodeC = 5;
+    const int CodeA = rand() % 5 + 1;
+    const int CodeB = rand() % 5 + 1;
+    const int CodeC = rand() % 5 + 1;
 
     const int CodeSum = CodeA + CodeB + CodeC;
     const int CodeProduct = CodeA * CodeB * CodeC;
@@ -37,13 +37,13 @@ bool PlayGame(int Difficulty)
     // Check if player guess is correct 
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
-        std::cout << "\nYou\'ve cracked the code!";
+        std::cout << "\n**You\'ve cracked the code!";
         return true;
     }
 
     else
     {
-        std::cout << "\nYou failed miserably. Try again!\n";
+        std::cout << "\n**You failed miserably. Try again!\n";
         return false;
     }
 }
@@ -67,7 +67,7 @@ int main()
         }
     }
 
-    std::cout << "\nCongratulations, you\'ve escaped the prison.";
+    std::cout << "\n****Congratulations, you\'ve escaped the prison.";
 
     return 0;
 }
